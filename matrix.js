@@ -3,6 +3,40 @@ function generateMatrices() {
     createMatrix('The 2nd Matrix','matrix2', document.getElementById('matrix2Rows').value, document.getElementById('matrix2Cols').value);
 }
 
+function addMatrices(matrix1, matrix2){
+    if (matrix1.length !== matrix2.length || matrix1[0].length !== matrix2[0].length) {
+        console.log("Matrix dimensions do not match. Addition not possible.");
+        return;
+    }
+
+    let result = [];
+    for (let i = 0; i < matrix1.length; i++) {
+        let row = [];
+        for (let j = 0; j < matrix1[0].length; j++) {
+            row.push(matrix1[i][j] + matrix2[i][j]);
+        }
+        result.push(row);
+    }
+    return result;
+}
+
+function subtractMatrices(matrix1, matrix2) {
+    if (matrix1.length !== matrix2.length || matrix1[0].length !== matrix2[0].length) {
+        console.log("Matrix dimensions do not match. Subtraction not possible.");
+        return;
+    }
+
+    let result = [];
+    for (let i = 0; i < matrix1.length; i++) {
+        let row = [];
+        for (let j = 0; j < matrix1[0].length; j++) {
+            row.push(matrix1[i][j] - matrix2[i][j]);
+        }
+        result.push(row);
+    }
+    return result;
+};
+
 const createMatrix = (title, containerId, rows, cols) => {
     let container = document.getElementById(containerId);
     container.innerHTML = ''; // Clear previous content
