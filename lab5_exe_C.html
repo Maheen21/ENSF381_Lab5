@@ -262,12 +262,22 @@ Description : DOM Elements.
 				navigation.appendChild(navItem);
 
 				// Task 8: Change the submit button text upon clicking and make it disabled
-
+				const button = document.querySelector('input[type=button]');
+				button.addEventListener("click", function(){
+					this.value = "changed";
+					this.disabled = true;
+				})
 
 				// Task 9: Change the text color of each item in the 'Related Links' to green
-
+				const aside = document.querySelectorAll("aside ul li a");
+				aside.forEach((item) =>{
+					item.style.color = "green";
+				})
 
 				// Task 10: Add a red solid border to the footer
+				const footer = document.querySelector('footer')
+				footer.style.border = "2px solid red";
+
 			});
 		</script>
 	</body>
