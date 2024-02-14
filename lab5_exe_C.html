@@ -218,6 +218,9 @@ Description : DOM Elements.
 				navigationBar.style.backgroundColor = '#651e3e';
 
 				// Task 3: Hide the section titled 'What is full-stack?'
+				const FullStack = Array.from(
+						documment.querySelectorAll("h2")
+				).find((h2) => h2.textContent === 'What is full-stack?');
 
 
 				// Task 4: Create a new <p> element and append it to the 'About Us' section
