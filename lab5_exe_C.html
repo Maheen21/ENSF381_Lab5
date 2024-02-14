@@ -254,7 +254,12 @@ Description : DOM Elements.
 					img.setAttribute('src', './images/example.svg');
 
 				// Task 7: Add a new item in the navigation menu
-
+				const navItem= document.createElement('li');
+				const navLink= document.createElement('a');
+				navLink.textContent ="NewItem";
+				navItem.appendChild(navLink);
+				const navigation= document.querySelector("nav ul");
+				navigation.appendChild(navItem);
 
 				// Task 8: Change the submit button text upon clicking and make it disabled
 
