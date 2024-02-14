@@ -249,14 +249,15 @@ Description : DOM Elements.
 				}
 
 				// Task 6: Set the src attribute of the image
-				const image = document.querySelector("img")
+				const image = document.querySelector("img");
 				if(image)
-					img.setAttribute('src', './images/example.svg');
+					image.setAttribute('src', './images/example.svg');
 
 				// Task 7: Add a new item in the navigation menu
 				const navItem= document.createElement('li');
 				const navLink= document.createElement('a');
 				navLink.textContent ="NewItem";
+				navLink.setAttribute("href", "#");
 				navItem.appendChild(navLink);
 				const navigation= document.querySelector("nav ul");
 				navigation.appendChild(navItem);
@@ -264,15 +265,15 @@ Description : DOM Elements.
 				// Task 8: Change the submit button text upon clicking and make it disabled
 				const button = document.querySelector('input[type=button]');
 				button.addEventListener("click", function(){
-					this.value = "changed";
+					this.value = "Submitted";
 					this.disabled = true;
-				})
+				});
 
 				// Task 9: Change the text color of each item in the 'Related Links' to green
 				const aside = document.querySelectorAll("aside ul li a");
 				aside.forEach((item) =>{
 					item.style.color = "green";
-				})
+				});
 
 				// Task 10: Add a red solid border to the footer
 				const footer = document.querySelector('footer')
