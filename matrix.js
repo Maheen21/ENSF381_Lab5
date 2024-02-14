@@ -65,6 +65,9 @@ function performOperation(operation) {
     let result = [1, 2, 3, 4, 5, 6, 7, 8];
     // Call your matrix calculation functions here
     // For example: if (operation === 'add') { addMatrices(matrix1, matrix2); }
+    if (operation === 'add') { addMatrices(matrix1, matrix2); }
+    if (operation === 'subtract') { subtractMatrices(matrix1, matrix2); }
+    if (operation === 'multiply') { multiplyMatrices(matrix1, matrix2); }
 	// prints suitable messages for impossible situation
     showResult('The Result', 'matrix3', 2, 4, result); // use suitable function for printing results
 }
