@@ -218,12 +218,26 @@ Description : DOM Elements.
 				navigationBar.style.backgroundColor = '#651e3e';
 
 				// Task 3: Hide the section titled 'What is full-stack?'
-				const FullStack = Array.from(
-						documment.querySelectorAll("h2")
-				).find((h2) => h2.textContent === 'What is full-stack?');
 
+				const fullStak = Array.from(
+					document.querySelectorAll('h2')
+				).find((h2) => h2.textContent === "What is full-stack?");this
 
+				if(fullStak){
+					fullStak.parentElement.style.display = 'none';
+				}
+				// const fullStack = Array.from(
+				// 		documment.querySelectorAll("h2")
+				// ).find((h2) => h2.textContent === 'What is full-stack?');
+
+				// if(fullStack){
+				// 	FullStack.parentElement.style.display = "none";
+				// }
 				// Task 4: Create a new <p> element and append it to the 'About Us' section
+				const new_par = document.createElement('p');
+				new_par.textContent = "We love ducks";
+				const aboutUs = document.querySelector('section');
+				aboutUs.appendChild(new_par);
 
 
 				// Task 5: Add placeholders to input elements based on their corresponding label IDs
