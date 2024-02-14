@@ -241,7 +241,12 @@ Description : DOM Elements.
 
 
 				// Task 5: Add placeholders to input elements based on their corresponding label IDs
-
+				const input= document.querySelectorAll('label');
+				for(const i of input){
+					const id = i.getAttribute('for');
+					const e = document.getElementById(id);
+					e.setAttribute('placeholder', id);
+				}
 
 				// Task 6: Set the src attribute of the image
 
